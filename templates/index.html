@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Image Classification App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        form {
+            margin: 20px auto;
+            width: 300px;
+        }
+
+        input[type=file] {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Classification App</h1>
+    <p>Upload an image and get the predicted class name.</p>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" id="image" name="image" accept="image/*" required>
+        <label for="image">Choose an image</label>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
